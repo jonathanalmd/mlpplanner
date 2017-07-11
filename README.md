@@ -1,8 +1,19 @@
-# tg-jalmeida
-Parser multilingual (STRIPS, ADL e PDDL) para planejadores automáticos
+# Guia para utilizar o parser
 
-O comando para executar o protótipo é:
+Como executar: 
 
-    python mlp.py <form> <runmode>
+1) (Parser) 
 
-Em que \<form\> pode ser um arquivo de formalização STRIPS, ADL ou PDDL. Para o caso de PDDL, vão ser dois arquivos: formalização de domínio primeiro e depois a formalização do problema. O argumento \<runmode\> é opcional e serve para informar o modo de execução: parser ou planejador. Se nenhum argumento for passado, será executado no modo planejador. Para esse modo de execução (planejador), o arquivo de formalização será analisado e interpretado. Se a entrada estiver sintaticamente e semanticamente correta, o algoritmo de planejamento será executado. Caso seja passado o argumento '-p', será executado no modo parser, em que não haverá execução do algoritmo de planejamento (módulo de planejamento) e consequentemente não vai haver saída do plano de ação.
+	python3 main.py domain.pddl problem.pddl 
+
+2) (Propositional Planner) 
+
+	python3 main.py domain.pddl problem.pddl -p
+
+O arquivo main.py realiza o parse de formalizações e apresenta diferentes possibilidades de se acessar as informações que foram obtidas - utilizando métodos get - incluindo comentários explicando o que é retornado ao utilizar os getters. Qualquer dúvida ou sugestão para adicionar algum método getter a mais: jonathanalmd@gmail.com
+
+Exemplos de execução:
+
+    python3 main.py examples/galaxy/galaxy.pddl examples/galaxy/galaxy-p1.pddl
+
+    python3 main.py examples/galaxy/galaxy.pddl examples/galaxy/galaxy-p1.pddl -p
