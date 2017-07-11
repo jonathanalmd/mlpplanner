@@ -17,3 +17,9 @@ Exemplos de execução:
     python3 main.py examples/galaxy/galaxy.pddl examples/galaxy/galaxy-p1.pddl
 
     python3 main.py examples/galaxy/galaxy.pddl examples/galaxy/galaxy-p1.pddl -p
+
+
+Obs:
+O parser implementa apenas a tipagem básica (sem tipo de tipos) e apeanas os operadores básicos da linguagem PDDL: and, not e = 
+
+Para mais detalhes da implementação: monografia em breve será publicada em http://www.bdm.unb.br 
